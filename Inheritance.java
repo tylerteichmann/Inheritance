@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Inheritance
  */
@@ -48,5 +50,17 @@ public class Inheritance {
         savingsAcct.deposit(500);
         savingsAcct.withdraw(10);
         System.out.println(savingsAcct.getBalance());
+
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(new Student("Paul"));
+        students.add(new Student("Peter"));
+        students.add(new Student("Parker"));
+
+        students.sort(new StudentComparator());
+        System.out.println(students);
+
+        for (Student student : students) {
+            System.out.println(student.GetName());
+        }
     }
 }

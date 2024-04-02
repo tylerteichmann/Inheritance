@@ -9,4 +9,8 @@ public class Student extends User {
     public String GetName() {
         return super.GetName() + " is a student.";
     }
+
+    public String toString() {
+        return super.GetName();
+    }
 }
